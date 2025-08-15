@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Side Image -->
+      <div class="left">
+        <img
+          src="images/login image.png"
+          alt="Login Illustration"
+        />
+      </div>
+
+      <!-- Right Side Login Form -->
+      <div class="right">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="input-group">
+            <img
+              class="icon-mail"
+              src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
+              alt="user icon"
+            />
+            <input type="text" id="username" placeholder="Enter your Name" required />
+          </div>
+
+          <div class="input-group">
+            <img
+              class="icon-left"
+              src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png"
+              alt="lock icon"
+            />
+            <input type="password" id="password" placeholder="Password" required />
+            <img
+              class="icon-right"
+              src="https://cdn-icons-png.flaticon.com/128/2767/2767146.png"
+              alt="eye icon"
+            />
+          </div>
+
+          <div class="forgot">Forgot Password?</div>
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

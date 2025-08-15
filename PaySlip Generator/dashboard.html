@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2 class="logo">🅿</h2>
+        <nav>
+          <a href="#" class="active"
+            ><i class="fa-solid fa-chart-pie"></i> Overview</a
+          >
+          <a href="payroll.html"
+            ><i class="fa-solid fa-file-invoice-dollar"></i> Payroll</a
+          >
+          <a href="payslip.html"
+            ><i class="fa-solid fa-file-lines"></i> Payslip</a
+          >
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Top Bar -->
+        <header class="topbar">
+          <h3>Good Morning !!!</h3>
+          <div class="search">
+            <input type="text" placeholder="Search" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <i class="fa-regular fa-bell"></i>
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="Profile"
+            class="profile-pic"
+          />
+        </header>
+
+        <!-- Stats Cards -->
+        <section class="stats">
+          <div class="card">
+            <i class="fa-solid fa-users"></i>
+            <p>Total Employees</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-user-minus"></i>
+            <p>Number Of leave</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-user-plus"></i>
+            <p>New Employee’s</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-plane"></i>
+            <p>Holiday of this Year</p>
+          </div>
+        </section>
+
+        <!-- Calendar + Meetings -->
+        <section class="bottom">
+          <!-- Calendar -->
+          <div class="calendar">
+            <h4>Calendar</h4>
+            <iframe
+              src="https://calendar.google.com/calendar/embed?mode=MONTH&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&height=300"
+              width="100%"
+              height="250"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
+          </div>
+
+          <!-- Meetings -->
+          <div class="meetings">
+            <h4>Upcoming Meetings <span>View All</span></h4>
+            <div class="meeting-item">
+              Client Meeting - 10.00 AM <span>Wed May 17</span>
+            </div>
+            <div class="meeting-item">
+              Team Meeting - 11.00 AM <span>Wed May 17</span>
+            </div>
+            <div class="meeting-item">
+              HR Interview - 2.00 PM <span>Mon May 17</span>
+            </div>
+            <div class="meeting-item">
+              Client Meeting - 4.00 PM <span>Mon May 17</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

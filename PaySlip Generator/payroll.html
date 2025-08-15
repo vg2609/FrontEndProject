@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Details</title>
+        <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/payrol.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li><a href="dashboard.html">&#128202; Overview</a></li>
+                <li class="active"><a href="payroll.html">&#128179; Payroll</a></li>
+                <li><a href="payslip.html">&#128221; Payslip</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="top-bar">
+                <h2>Payroll Details</h2>
+                <div class="top-buttons">
+                    <button class="month-btn">This Month &#128197;</button>
+                    <button class="download-btn">Download</button>
+                </div>
+            </div>
+
+            <div class="form-container">
+              <form id="payrollForm">
+    <div class="form-row">
+        <div class="form-group">
+            <label>Employee Name</label>
+            <input type="text" id="empName">
+        </div>
+        <div class="form-group">
+            <label>Employee Role</label>
+            <input type="text" id="role">
+        </div>
+        <div class="form-group">
+            <label>Employee ID</label>
+            <input type="text" id="empId">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="date">
+        </div>
+        <div class="form-group">
+            <label>Basic Salary</label>
+            <input type="number" id="basic">
+        </div>
+        <div class="form-group">
+            <label>Total Salary</label>
+            <input type="number" id="totalSalary">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label>No of Working Days</label>
+            <input type="number" id="workingDays">
+        </div>
+        <div class="form-group">
+            <label>Total Present Days</label>
+            <input type="number" id="presentDays">
+        </div>
+        <div class="form-group">
+            <label>Total Leave Days</label>
+            <input type="number" id="leaveDays">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label>Additions</label>
+            <input type="number" id="additions">
+        </div>
+        <div class="form-group">
+            <label>Deductions</label>
+            <input type="number" id="deductions">
+        </div>
+        <div class="form-group"></div>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="submit-btn">Submit Payroll</button>
+        <button type="button" class="cancel-btn">Cancel</button>
+    </div>
+</form> 
+            </div>
+        </main>
+    </div>
+     <script src="js/main.js"></script>
+</body>
+</html>
