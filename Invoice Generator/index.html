@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Invoice - Vetri Electronics</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Vetri Electronics</h2>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#" class="active">Create Invoice</a></li>
+      <li><a href="#">View Invoices</a></li>
+    </ul>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <header>
+      <h1>Create New Invoice</h1>
+      <button class="btn">+ Create Invoice</button>
+    </header>
+
+    <!-- Customer Info -->
+    <section class="card">
+      <h2>Customer Information</h2>
+      <div class="grid-2">
+        <input type="text" id="customerName" placeholder="Customer Name">
+        <input type="email" id="customerEmail" placeholder="Customer Email">
+        <input type="text" id="customerPhone" placeholder="Customer Phone">
+        <input type="text" id="customerAddress" placeholder="Customer Address">
+      </div>
+    </section>
+
+    <!-- Product Info -->
+    <section class="card">
+      <h2>Product Information</h2>
+      <div class="grid-4">
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="number" id="quantity" placeholder="Quantity" value="0">
+        <input type="number" id="price" placeholder="Price per Unit" value="0">
+        <input type="number" id="gst" placeholder="GST %" value="18">
+      </div>
+    </section>
+
+    <!-- Invoice Summary -->
+    <section class="card">
+      <h2>Invoice Summary</h2>
+      <div class="summary">
+        <p>Subtotal: ₹<span id="subtotal">0.00</span></p>
+        <p>Total GST: ₹<span id="gstAmount">0.00</span></p>
+        <p><b>Total Amount: ₹<span id="total">0.00</span></b></p>
+      </div>
+    </section>
+
+    <!-- Additional Info -->
+    <section class="card">
+      <h2>Additional Information</h2>
+      <div class="grid-2">
+        <input type="date" id="invoiceDate">
+        <input type="date" id="dueDate">
+      </div>
+      <textarea id="notes" placeholder="Any additional notes..."></textarea>
+    </section>
+
+    <!-- Generate Button -->
+    <div class="center">
+      <button class="btn generate">Generate Invoice</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
