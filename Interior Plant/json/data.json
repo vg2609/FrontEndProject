@@ -1,0 +1,28 @@
+[
+  {  "id" : 1, "name": "Lucky Bonsai Plant", "price": "290", "img": "images/bansai.webp" },
+  {  "id" : 2,"name": "Lucky Jade Plant", "price": "390", "img": "images/jade plant.jpg" },
+  {"id":3 ,"name" : "Zamiya Green Plant", "price" :"260" , "img" : "images/zamiya.webp"},
+  {"id": 4,"name" : "Spider Plant", "price" :"250" , "img" : "images/spider.webp"},
+  {"id":5 ,"name" : "Lucky Bamboo Plant", "price" :"280" , "img" : "images/bamboo.webp"},
+  {"id":6 ,"name" : "Aglaonenna Red Plant", "price" :"580" , "img" : "images/Agloanima md.webp"},
+  {"id": 7,"name" : "Sanke Plant", "price" :"560" , "img" : "images/snak.webp"},
+  {"id": 8,"name" : "Rhoeo Plant", "price" :"180" , "img" : "images/rhio.webp"} ,
+    {"id": 9,"name" : "oyster Plant", "price" :"190" , "img" : "images/oyster.webp"},
+  {"id":10 ,"name" : "Lucky Jade Plant ", "price" :"290" , "img" : "images/jade plant.jpg"},
+  {"id": 11,"name" : "Peacock Plant", "price" :"720" , "img" : "images/Peacok pl.webp"},
+  {"id": 12,"name" : "Peparomia Plant", "price" :"390" , "img" : "images/Peperomia.webp"},
+  {"id": 13,"name" : "Philodendron Plant", "price" :"290" , "img" : "images/philiyodendro pl.webp"},
+  {"id": 14,"name" : "Synenomium", "price" :"690" , "img" : "images/Syngo pl.webp"},
+  {"id":15 ,"name" : "Fidal Fig plant", "price" :"490" , "img" : "images/Fidal fig pl.webp"},
+  {"id":16 ,"name" : "Aralia Plant", "price" :"190" , "img" : "images/Aralia pl.webp"},
+   {"id":17 ,"name" : "Neem Cake", "price" :"880" , "img" : "images/neem cake.jpg"},
+    {"id":18 ,"name" : "All In One Care Kit", "price" :"580" , "img" : "images/Care kit.jpg"},
+ {"id":19 ,"name" : "CowDung Mannure", "price" :"560" , "img" : "images/cowdung.jpg"},
+     {"id": 20,"name" : "Cocopet", "price" :"180" , "img" : "images/cocopet.webp"},
+      {"id": 21,"name" : "Water globe", "price" :"790" , "img" : "images/water globe.jpg"},
+       {"id":22 ,"name" : "Vemicomposit", "price" :"540" , "img" : "images/vermi.jpg"},
+        {"id":23 ,"name" : "Plant Straw", "price" :"250" , "img" : "images/straw.jpg"},
+         {"id": 24,"name" : "Water meter", "price" :"290" , "img" : "images/water meter.jpg"}
+
+
+]

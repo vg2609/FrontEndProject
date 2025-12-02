@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deal Of The Day</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Volkhov&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  <section class="deal-section">
+    <div class="deal-banner">Deal Of the Day</div>
+
+    <div class="timer-section">
+      <h3>Today's Green Glory</h3>
+      <div class="countdown">
+        <div class="time-box"><span id="hours">00</span><div>Hour</div></div>
+        <div class="time-box"><span id="minutes">00</span><div>Min</div></div>
+        <div class="time-box"><span id="seconds">00</span><div>Sec</div></div>
+      </div>
+    </div>
+
+    <div class="product-highlight">
+      <div class="product-card">
+        <div class="offer-badge">30% OFF</div>
+        <img src="images/bamboo.webp" alt="Lucky Bamboo Plant">
+        <div class="product-info">
+          <div class="rating">⭐ 4.5</div>
+          <h4>Set Of 2 Lucky Bamboo Plant with Self Watering</h4>
+          <p><del>Rs.390</del> <strong>Rs.273</strong></p>
+          <button>Add to Basket</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Countdown Timer (13 hours from now)
+    let countdown = 13 * 60 * 60; // seconds
+
+    const updateTimer = () => {
+      let hours = Math.floor(countdown / 3600);
+      let minutes = Math.floor((countdown % 3600) / 60);
+      let seconds = countdown % 60;
+
+      document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+      document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+
+      if (countdown > 0) countdown--;
+    };
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+</body>
+</html>

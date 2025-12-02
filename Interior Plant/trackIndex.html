@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Track Your Order - Ray</title>
+  <link rel="stylesheet" href="css/track.css" />
+</head>
+<body>
+  <div class="overlay">
+    <div class="track-box">
+      <button class="close-btn" onclick="window.history.back()">×</button>
+
+      <img src="images/logo.png" alt="Ray Logo" class="logo" />
+      <h2>Ray</h2>
+
+      <div class="icon">
+        <i class='bx bx-truck'></i>
+      </div>
+
+      <h3>Track your Order</h3>
+
+      <div class="toggle-buttons">
+        <button id="orderBtn" class="active" onclick="switchMode('order')">Order ID</button>
+        <button id="invoiceBtn" onclick="switchMode('invoice')">Invoice ID</button>
+      </div>
+
+      <input type="text" id="inputField" placeholder="Enter your order ID or invoice ID" />
+       <input type="text" id="inputField" placeholder="Enter billing Contact" />
+
+      <button class="track-btn" onclick="trackOrder()">Track Now</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
