@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2><i class="fa-solid fa-users"></i> EMS</h2>
+        <ul>
+          <li class="active"><i class="fa-solid fa-chart-pie"></i> Overview</li>
+          <li><i class="fa-solid fa-user"></i> Profile</li>
+          <li><i class="fa-solid fa-id-card"></i> Employee Details</li>
+          <li><i class="fa-solid fa-calendar-check"></i> Attendance</li>
+          <li><i class="fa-solid fa-plane-departure"></i> Leave</li>
+          <li><i class="fa-solid fa-money-bill-wave"></i> Payroll</li>
+          <li><i class="fa-solid fa-file-invoice-dollar"></i> Payslip</li>
+          <li><i class="fa-solid fa-bell"></i> Notification</li>
+          <li><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+        </ul>
+      </aside>
+
+      <!-- Main -->
+      <main class="main">
+        <header>
+          <div>
+            <h3>Good Morning!!!</h3>
+            <p id="date-time"></p>
+            <!-- Dynamic date & time -->
+          </div>
+          <div class="search-box">
+            <input type="text" placeholder="Search" />
+            <button>🔍</button>
+          </div>
+          <div class="profile">
+            <span>🔔</span>
+            <img src="https://via.placeholder.com/40" alt="profile" />
+          </div>
+        </header>
+
+        <!-- Stats -->
+        <section class="stats">
+          <div class="card green">
+            <i class="fa-solid fa-users"></i>
+            <h2>30</h2>
+            <p>Total Employees</p>
+          </div>
+          <div class="card blue">
+            <i class="fa-solid fa-user-minus"></i>
+            <h2>05</h2>
+            <p>Today Absent</p>
+          </div>
+          <div class="card yellow">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h2>20</h2>
+            <p>Holiday this year</p>
+          </div>
+          <div class="card purple">
+            <i class="fa-solid fa-plane"></i>
+            <h2>12</h2>
+            <p>Leave this year</p>
+          </div>
+        </section>
+
+        <!-- Charts -->
+        <section class="charts">
+          <div class="chart-box">
+            <h4>Working Times</h4>
+            <canvas id="workingChart"></canvas>
+          </div>
+          <div class="chart-box">
+            <h4>Employee Structure</h4>
+            <canvas id="employeeChart"></canvas>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
