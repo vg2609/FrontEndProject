@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Template</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .template-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: 40px;
+    }
+    .template-card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .template-card:hover {
+      transform: scale(1.05);
+      border-color: #333;
+    }
+    .template-card img {
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #ff914d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Resume <span>Builder</span></div>
+    </nav>
+  </header>
+
+  <h2 style="text-align:center; margin:20px;">Choose Your Resume Template</h2>
+
+  <div class="template-container">
+    <div class="template-card" onclick="selectTemplate('template1')">
+      <img src="templates/temp1.jpeg" alt="Template 1">
+      <h3>Template 1</h3>
+      <button class="btn">Use This</button>
+    </div>
+    <div class="template-card" onclick="selectTemplate('template2')">
+      <img src="templates/temp2.jpeg" alt="Template 2">
+      <h3>Template 2</h3>
+      <button class="btn">Use This</button>
+    </div>
+    <div class="template-card" onclick="selectTemplate('template3')">
+      <img src="templates/temp3.png" alt="Template 3">
+      <h3>Template 3</h3>
+      <button class="btn">Use This</button>
+    </div>
+  </div>
+
+  <script src="js/index.js">  </script>
+</body>
+</html>

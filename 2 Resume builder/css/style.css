@@ -1,0 +1,411 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.logo span {
+  color: #ff5f6d;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.primary {
+  background: linear-gradient(45deg, #ff5f6d, #ff9966);
+  color: white;
+}
+.secondary {
+  border: 2px solid #ff5f6d;
+  background: transparent;
+  color: #ff5f6d;
+}
+.build-btn {
+  background: linear-gradient(45deg, #ff5f6d, #ff9966);
+  color: white;
+}
+
+ .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("/images/heroimage.jpeg") no-repeat center/cover;
+      position: relative;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* Dark overlay for readability */
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      background: #ff914d;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #e67829;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+
+    .auth-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 350px;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .auth-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .auth-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .auth-container button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: #ff914d;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .auth-container button:hover {
+      background: #e67829;
+    }
+    .toggle-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      cursor: pointer;
+      color: #007bff;
+    }
+
+    /* Main Resume Builder Container */
+.builder-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;  /* sidebar, form+template, preview */
+  grid-template-rows: 1fr 1fr;         /* 2 rows */
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh; /* full screen height */
+}
+
+/* Sidebar spans both rows */
+.sidebar {
+  grid-row: 1 / span 2;   /* take full height (2 rows) */
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+    .sidebar h3 {
+      margin-bottom: 15px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin: 10px 0;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+    .sidebar ul li:hover,
+    .sidebar ul li.active {
+      background: #555;
+    }
+
+/* Form Section in 2nd column, 1st row */
+.form-section {
+  grid-column: 2;    /* place in second column */
+  grid-row: 1;       /* first row */
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 8px;
+}
+ .form-section h2 {
+      margin-bottom: 20px;
+    }
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .form-section input,
+    .form-section textarea {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      gap: 45px;
+      margin: 10px;
+    }
+    .btn {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+/* Template Section in 2nd column, 2nd row */
+.template-section {
+  grid-column: 2;    /* place in second column */
+  grid-row: 2;       /* second row */
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Preview spans both rows */
+.preview {
+  grid-column: 3;    /* third column */
+  grid-row: 1 / span 2;  /* take full height (2 rows) */
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* .preview.template1 {
+  font-family: Arial, sans-serif;
+  border-left: 5px solid #007bff;
+}
+
+.preview.template2 {
+  font-family: 'Georgia', serif;
+  border-top: 5px solid #28a745;
+  color: #444;
+}
+
+.preview.template3 {
+  background: #f9f9f9;
+  font-family: 'Courier New', monospace;
+  border: 2px dashed #ff5733; 
+}*/
+
+/* General preview styling */
+.preview.resume {
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- Template 1 (Professional: temp1.png) ---------- */
+.resume.template1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  background: #f8f9fb;
+}
+
+.resume.template1 .resume-header {
+  background: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+.resume.template1 h1 {
+  font-size: 26px;
+  margin: 10px 0;
+  color: #0a2540;
+}
+.resume.template1 h3 {
+  font-size: 16px;
+  color: gray;
+}
+
+/* ---------- Template 2 (Blue & Yellow: temp2.jpeg) ---------- */
+.resume.template2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background: #ffffff;
+  border: 2px solid #003366;
+}
+
+.resume.template2 .resume-header {
+  background: #003366;
+  color: white;
+  padding: 15px;
+}
+.resume.template2 h1 {
+  color: #ffcc00;
+}
+.resume.template2 h3 {
+  color: white;
+}
+.resume.template2 section h3 {
+  border-bottom: 2px solid #003366;
+  padding-bottom: 4px;
+}
+
+/* ---------- Template 3 (Gray Sidebar: temp3.png) ---------- */
+.resume.template3 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background: #fff;
+}
+
+.resume.template3 .resume-header {
+  background: #2f2f2f;
+  color: white;
+  padding: 20px;
+}
+.resume.template3 h1 {
+  margin: 0;
+  font-size: 24px;
+}
+.resume.template3 h3 {
+  margin: 5px 0;
+  font-weight: normal;
+  color: #ddd;
+}
+.resume.template3 section h3 {
+  background: #2f2f2f;
+  color: white;
+  padding: 5px;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  user-select: none;
+}
+
+.custom-select .selected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.custom-select .selected img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.custom-select .options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  z-index: 1000;
+}
+
+.custom-select .option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.custom-select .option:hover {
+  background: #f1f1f1;
+}
+
+.custom-select .option img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}

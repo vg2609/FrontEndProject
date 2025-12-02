@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>  
+
+  </style>
+</head>
+<body>
+  <div class="builder-container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>Sections</h3>
+      <ul>
+        <li class="active" onclick="showForm('personal')">Personal Details</li>
+        <li onclick="showForm('summary')">Summary</li>
+        <li onclick="showForm('education')">Education</li>
+        <li onclick="showForm('skills')">Skills</li>
+        <li onclick="showForm('experience')">Experience</li>
+      </ul>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section">
+      <h2 id="formTitle">Personal Details</h2>
+      <form id="resumeForm">
+        <!-- Personal Details Form -->
+        <div class="form-group" id="form-personal">
+          <input type="text" id="name" placeholder="Full Name" oninput="updatePreview()">
+          <input type="email" id="email" placeholder="Email" oninput="updatePreview()">
+          <input type="text" id="phone" placeholder="Phone Number" oninput="updatePreview()">
+          <input type="text" id="title" placeholder="Job Title" oninput="updatePreview()">
+          <label for="profileUpload">Upload Profile Photo</label>
+  <input type="file" id="profileUpload" accept="image/*" onchange="previewProfilePhoto(event)">
+        </div>
+
+        <!-- Summary Form -->
+<div class="form-group" id="form-summary" style="display:none;">
+  <label for="summary">Summary</label>
+  <textarea id="summary" placeholder="Write a short professional summary..." oninput="updatePreview()"></textarea>
+</div>
+
+        <!-- Education Form -->
+        <div class="form-group" id="form-education" style="display:none;">
+          <textarea id="education" placeholder="Education Details" oninput="updatePreview()"></textarea>
+        </div>
+
+        <!-- Skills Form -->
+        <div class="form-group" id="form-skills" style="display:none;">
+  <label for="skillInput">Add a Skill</label>
+  <div style="display:flex; gap:10px; align-items:center;">
+    <input type="text" id="skillInput" placeholder="Enter a skill">
+    <button type="button" class="btn" onclick="addSkill()">Add</button>
+  </div>
+</div>
+
+        <!-- Experience Form -->
+        <div class="form-group" id="form-experience" style="display:none;">
+          <textarea id="experience" placeholder="Work Experience" oninput="updatePreview()"></textarea>
+        </div>
+      </form>
+    </div>
+
+    
+<!-- Template Selection Section -->
+<div class="template-section">
+  <h2>Select Template</h2>
+  <div class="custom-select">
+    <div class="selected" onclick="toggleDropdown()">  
+      <img src="templates/temp1.jpeg" alt="Default Template" id="selectedTemplateImg">
+      <span id="selectedTemplateText">Default</span>
+    </div>
+    <div class="options" id="templateOptions">
+      <div class="option" onclick="applyTemplate('default', 'templates/templ1.png', 'Default')">
+        <img src="templates/temp1.jpeg" alt="Default Template">
+        <span>Default</span>
+      </div>
+      <div class="option" onclick="applyTemplate('template1', 'templates/templ1.png', 'Template 1')">
+        <img src="templates/temp1.jpeg" alt="Template 1">
+        <span>Template 1</span>
+      </div>
+      <div class="option" onclick="applyTemplate('template2', 'templates/temp2.jpeg', 'Template 2')">
+        <img src="templates/temp2.jpeg" alt="Template 2">
+        <span>Template 2</span>
+      </div>
+      <div class="option" onclick="applyTemplate('template3', 'templates/temp3.png', 'Template 3')">
+        <img src="templates/temp3.png" alt="Template 3">
+        <span>Template 3</span>
+      </div>
+    </div>
+  </div>
+    <!-- Download Button BELOW the preview -->
+<div style="margin-top:20px; text-align:center;">
+  <button type="button" class="btn" id="downloadPDF">Download as PDF</button>
+</div>
+</div>
+
+
+    <!-- Live Preview -->
+<div class="preview resume" id="resumePreview">
+    <div class="resume-header">
+    <img id="profilePic" src="images/profile.png" alt="Profile" style="width:100px;height:100px;border-radius:50%;object-fit:cover;" />
+    <div>
+      <h1 id="previewName">Your Name</h1>
+      <h3 id="previewTitle">Job Title</h3>
+      <p id="previewEmail">Email</p>
+  <p id="previewPhone">Phone</p>
+    </div>
+  </div>
+
+  <section>
+  <h3>Summary</h3>
+  <p id="previewSummary">Your professional summary will appear here.</p>
+</section>
+
+  <section>
+    <h3>Education</h3>
+    <p id="previewEducation">Your education details will appear here.</p>
+  </section>
+  <section>
+    <h3>Skills</h3>
+    
+    <ul id="previewSkills">
+    </ul>
+  </section>
+  <section>
+    <h3>Experience</h3>
+    <p id="previewExperience">Your experience details will appear here.</p>
+  </section>
+
+</div>
+
+
+
+
+  </div>
+
+  <script src="js/buildResume.js">  </script>
+</body>
+</html>
